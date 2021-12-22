@@ -28,7 +28,7 @@ def on_message(client, userdata, message):
         mydb.cursor().execute(sql)
         mydb.commit()
         print(jsonData)
-        file = open("/home/pi/volkszaehler.org/htdocs/velotracker/location.json", "w")
+        file = open("lastPosition.json", "w")
         file.write(message.payload.decode())
         file.close
 
