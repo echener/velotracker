@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    #map {
+      height: 600px;
+
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 500px;
+
+    }
+  </style>
+  <script>
+    function initMap() {
+      const home = { lat: 47.486267, lng: 8.288360 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: home,
+      });
+      const marker = new google.maps.Marker({
+        position: home,
+        map: map,
+      });
+    }
+  </script>
+  <title>"Velotracker_PU"</title>
+  <link rel="stylesheet" href="Stylesheet/stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+
+    <img class=logo src=Bilder/Logo.png alt=Logo height=202.5 width=360>
+
+    <ul class="a">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Goals.html">Goals</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+
+    <H2>Welcome to the official Website<br> of the Velotracker 9000!</H2>
+
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2"
+      async>
+    </script>
+
+  </body>
+</html>
